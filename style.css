@@ -1,0 +1,130 @@
+/* Import font from google font */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* create css variables */
+:root{
+    /* font-family */
+    --font-family-grotesk: "Hanken Grotesk", sans-serif;
+    --font-family-montserrat: "Montserrat", sans-serif;
+    --white-color:#ffffff;
+}
+/* css reset */
+*,::before::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img,picture{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+#hero-img{
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.header-container{
+    padding: 25px;
+    min-height: 100vh;
+    background:linear-gradient(to left,#000000,#0a0a23),url('./assets/background-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+  
+
+}
+ul,li{
+    list-style-type: none;
+}
+.header__navbar ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.header__navbar ul li {
+    margin: 0 10px;
+}
+
+.header__navbar ul li a {
+    color: var(--white-color);
+    font-family: var(--font-family-grotesk);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.header__navbar ul li a:hover{
+   color: #f0c60c;
+   text-decoration: underline;
+}
+
+.fa-bars {
+    color: var(--white-color);
+    font-size: 20px;
+}
+
+/* This will push the last link to the right */
+.header__navbar ul li:last-child {
+    margin-left: auto; /* Pushes the last list item to the far right */
+}
+
+/* hero-text */
+.hero__info--text{
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: 50px auto;
+    padding: 20px;
+}
+.hero-left{
+    flex-grow: 1;
+    padding-right: 20px;
+}
+.hero-right {
+    position: relative;
+    flex: 1; /* Allow right section to grow */
+    min-width: 300px;
+}
+p {
+    max-width: 600px; /* Set a maximum width */
+    line-height: 1.5; /* Improve readability with line spacing */
+    font-size: 16px; /* Set a comfortable font size */
+    padding: 10px; /* Add some padding */
+    color: var(--white-color);
+    font-family: var(--font-family-montserrat);
+}
+h1{
+    color: var(--white-color);
+    font-family: var(--font-family-montserrat);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px;
+}
+.btn{
+    border: 0;
+    color: #000000;
+    background-color: var(--white-color);
+    font-size: 18px;
+    font-family: var(--font-family-montserrat);
+    padding: 12px 24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: all 0.3s ease linear;
+
+
+}
+.btn:hover{
+    color: #f0c60c;
+    transform: translateY(-3px);
+}
+
+
+
